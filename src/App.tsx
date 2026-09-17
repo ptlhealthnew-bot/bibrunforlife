@@ -21,7 +21,7 @@ export default function App() {
   // 2. ydate: พ.ศ.เกิด - ไม่กำหนดค่าเริ่มต้น (เริ่มต้นเป็นค่าว่าง)
   const [ydate, setYdate] = useState<number | ''>('');
 
-  // 3. distance: ระยะวิ่ง ("5k" สีแดง หรือ "10 k" สีฟ้า) - default "5k"
+  // 3. distance: ระยะวิ่ง ("5k" สีชมพู หรือ "10 k" สีฟ้า) - default "5k"
   const [distance, setDistance] = useState<DistanceType>('5k');
 
   // Runner name (optional)
@@ -173,14 +173,14 @@ export default function App() {
                 </div>
                 <div className="bg-slate-50 p-2 rounded-lg border border-slate-100">
                   <span className="text-slate-400 block text-[10px]">4. distance (ระยะวิ่ง)</span>
-                  <span className={`font-black ${calculationResult.distance === '5k' ? 'text-red-600' : 'text-sky-600'}`}>
+                  <span className={`font-black ${calculationResult.distance === '5k' ? 'text-pink-600' : 'text-sky-600'}`}>
                     {calculationResult.distance}
                   </span>
                 </div>
                 <div className="bg-slate-50 p-2 rounded-lg border border-slate-100 sm:col-span-2">
                   <span className="text-slate-400 block text-[10px]">5. grouprun (รุ่น)</span>
                   <span className={`font-bold font-bib text-sm ${
-                    calculationResult.distance === '5k' ? 'text-red-500' : 'text-sky-500'
+                    calculationResult.distance === '5k' ? 'text-pink-500' : 'text-sky-500'
                   }`}>
                     {calculationResult.grouprun !== '-' ? calculationResult.grouprun : 'รอคำนวณ'}
                   </span>

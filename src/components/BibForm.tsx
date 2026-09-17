@@ -140,24 +140,24 @@ export const BibForm: React.FC<BibFormProps> = ({
               <span>ระยะวิ่ง (distance)</span>
             </span>
             <span className="text-xs font-normal text-slate-500">
-              ตัวเลือก "5k" (สีแดง), "10 k" (สีฟ้า)
+              ตัวเลือก "5k" (สีชมพู), "10 k" (สีฟ้า)
             </span>
           </label>
           <div className="grid grid-cols-2 gap-3">
-            {/* 5k: สีแดง */}
+            {/* 5k: สีชมพู */}
             <button
               type="button"
               id="btn-distance-5k"
               onClick={() => onDistanceChange('5k')}
               className={`py-3 px-4 rounded-xl font-medium text-sm flex flex-col items-center justify-center transition-all duration-200 border-2 ${
                 distance === '5k'
-                  ? 'bg-red-500 text-white border-red-500 ring-2 ring-red-200 shadow-md shadow-red-200 font-bold scale-[1.01]'
-                  : 'bg-red-50/70 text-red-700 border-red-200/80 hover:bg-red-100/70'
+                  ? 'bg-pink-500 text-white border-pink-500 ring-2 ring-pink-200 shadow-md shadow-pink-200 font-bold scale-[1.01]'
+                  : 'bg-pink-50/70 text-pink-700 border-pink-200/80 hover:bg-pink-100/70'
               }`}
             >
               <span className="text-xl font-black font-bib tracking-wide">5k</span>
-              <span className={`text-[11px] font-medium ${distance === '5k' ? 'text-red-100' : 'text-red-500'}`}>
-                ระยะ 5k (สีแดง)
+              <span className={`text-[11px] font-medium ${distance === '5k' ? 'text-pink-100' : 'text-pink-500'}`}>
+                ระยะ 5k (สีชมพู)
               </span>
             </button>
 
@@ -217,28 +217,28 @@ export const BibForm: React.FC<BibFormProps> = ({
             id="computed-grouprun-card"
             className={`p-3.5 rounded-xl border shadow-xs transition-colors ${
               distance === '5k'
-                ? 'bg-gradient-to-br from-red-50/60 to-white border-red-200/80'
+                ? 'bg-gradient-to-br from-pink-50/60 to-white border-pink-200/80'
                 : 'bg-gradient-to-br from-sky-50/60 to-white border-sky-200/80'
             }`}
           >
             <div className={`flex items-center justify-between text-xs font-semibold mb-1 ${
-              distance === '5k' ? 'text-red-700' : 'text-sky-700'
+              distance === '5k' ? 'text-pink-700' : 'text-sky-700'
             }`}>
               <span className="flex items-center gap-1">
                 <Sparkles className="w-3.5 h-3.5" />
                 รุ่น (grouprun)
               </span>
               <span className={`text-[11px] font-semibold px-1.5 py-0.2 rounded ${
-                distance === '5k' ? 'text-red-600 bg-red-100' : 'text-sky-600 bg-sky-100'
+                distance === '5k' ? 'text-pink-600 bg-pink-100' : 'text-sky-600 bg-sky-100'
               }`}>
-                {distance === '5k' ? '5k (สีแดง)' : '10 k (สีฟ้า)'}
+                {distance === '5k' ? '5k (สีชมพู)' : '10 k (สีฟ้า)'}
               </span>
             </div>
             <div className="flex items-baseline gap-2">
               <span 
                 id="display-grouprun-value"
                 className={`text-2xl font-black font-bib transition-colors ${
-                  distance === '5k' ? 'text-red-500' : 'text-sky-500'
+                  distance === '5k' ? 'text-pink-500' : 'text-sky-500'
                 }`}
               >
                 {result.grouprun !== '-' ? result.grouprun : '-'}

@@ -11,9 +11,9 @@ export const BibCard: React.FC<BibCardProps> = ({ data, runnerName }) => {
   const isFemale = data.sex === 'หญิง';
   const is5k = data.distance === '5k';
 
-  // ถ้าระยะวิ่ง 10 k ให้รุ่นการแข่งขันเป็นสีฟ้า, 5k ให้เป็นสีแดง
-  const groupTextColor = is5k ? 'text-red-500' : 'text-sky-500';
-  const groupSubTextColor = is5k ? 'text-red-600' : 'text-sky-600';
+  // ถ้าระยะวิ่ง 10 k ให้รุ่นการแข่งขันเป็นสีฟ้า, 5k ให้เป็นสีชมพู
+  const groupTextColor = is5k ? 'text-pink-500' : 'text-sky-500';
+  const groupSubTextColor = is5k ? 'text-pink-600' : 'text-sky-600';
 
   return (
     <div className="relative w-full max-w-md mx-auto" id="printable-bib">
@@ -89,7 +89,7 @@ export const BibCard: React.FC<BibCardProps> = ({ data, runnerName }) => {
                 </div>
 
                 {/* แถบเชื่อมต่อสไตล์สปอร์ต */}
-                <div className={`w-10 h-1 rounded-full my-0.5 opacity-50 ${is5k ? 'bg-red-400' : 'bg-sky-400'}`}></div>
+                <div className={`w-10 h-1 rounded-full my-0.5 opacity-50 ${is5k ? 'bg-pink-400' : 'bg-sky-400'}`}></div>
 
                 {/* ตัวเลขจัดวางข้างล่าง (Number below, without "ปี") */}
                 <div 
@@ -122,7 +122,7 @@ export const BibCard: React.FC<BibCardProps> = ({ data, runnerName }) => {
               id="bib-distance-hero"
               className={`inline-flex items-center justify-center gap-2 px-8 py-2.5 rounded-2xl font-black font-bib text-2xl shadow-md transition-all ${
                 is5k
-                  ? 'bg-red-500 text-white shadow-red-200 ring-4 ring-red-100'
+                  ? 'bg-pink-500 text-white shadow-pink-200 ring-4 ring-pink-100'
                   : 'bg-sky-500 text-white shadow-sky-200 ring-4 ring-sky-100'
               }`}
             >
@@ -185,8 +185,8 @@ export const BibCard: React.FC<BibCardProps> = ({ data, runnerName }) => {
           </div>
 
           <div className="text-right flex items-center gap-1.5">
-            <span className={`w-2.5 h-2.5 rounded-full ${is5k ? 'bg-red-400' : 'bg-sky-400'}`}></span>
-            <span className={`text-[11px] tracking-wider font-bold ${is5k ? 'text-red-300' : 'text-sky-300'}`}>
+            <span className={`w-2.5 h-2.5 rounded-full ${is5k ? 'bg-pink-400' : 'bg-sky-400'}`}></span>
+            <span className={`text-[11px] tracking-wider font-bold ${is5k ? 'text-pink-300' : 'text-sky-300'}`}>
               {data.distance} • {data.grouprun}
             </span>
           </div>
