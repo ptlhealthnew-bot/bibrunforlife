@@ -1,0 +1,6 @@
+{
+  "name": "แสดงผล BIB",
+  "description": "แอปพลิเคชันคำนวณและแสดงผลป้าย BIB นักวิ่ง (เพศ พ.ศ.เกิด อายุ ระยะทาง และรุ่นการแข่งขัน) โทนสีพาสเทลฟ้าชมพู",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
