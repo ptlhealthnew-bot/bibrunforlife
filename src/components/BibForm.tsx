@@ -112,7 +112,7 @@ export const BibForm: React.FC<BibFormProps> = ({
             <input
               id="input-ydate"
               type="number"
-              placeholder="ระบุ พ.ศ.เกิด เช่น 2539"
+              placeholder="ระบุ พ.ศ.เกิด"
               value={ydate}
               onChange={handleYearInput}
               min="2450"

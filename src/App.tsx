@@ -18,8 +18,8 @@ export default function App() {
   // 1. sex: เพศ ("ชาย" หรือ "หญิง") - default "ชาย"
   const [sex, setSex] = useState<SexType>('ชาย');
 
-  // 2. ydate: พ.ศ.เกิด - default 2539 (age = 30)
-  const [ydate, setYdate] = useState<number | ''>(2539);
+  // 2. ydate: พ.ศ.เกิด - ไม่กำหนดค่าเริ่มต้น (เริ่มต้นเป็นค่าว่าง)
+  const [ydate, setYdate] = useState<number | ''>('');
 
   // 3. distance: ระยะวิ่ง ("5k" สีแดง หรือ "10 k" สีฟ้า) - default "5k"
   const [distance, setDistance] = useState<DistanceType>('5k');
@@ -38,7 +38,7 @@ export default function App() {
   // Reset form to defaults
   const handleReset = () => {
     setSex('ชาย');
-    setYdate(2539);
+    setYdate('');
     setDistance('5k');
     setRunnerName('RUNNER 2569');
   };
